@@ -1,0 +1,25 @@
+{
+  "name": "theme-builder-core",
+  "version": "1.0.0",
+  "description": "Core of tokenized atomic design system",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reykjavikingur/theme-builder-core.git"
+  },
+  "keywords": [
+    "atomic design"
+  ],
+  "author": "Andrew Strader",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reykjavikingur/theme-builder-core/issues"
+  },
+  "homepage": "https://github.com/reykjavikingur/theme-builder-core#readme"
+}
