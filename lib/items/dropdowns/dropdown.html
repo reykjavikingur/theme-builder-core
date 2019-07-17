@@ -1,0 +1,19 @@
+{% set id = random.ElementId() %}
+
+{% if direction === 'left' %}{% set directionClass = 'dropleft' %}
+{% elseif direction === 'right' %}{% set directionClass = 'dropright' %}
+{% elseif direction === 'up' %}{% set directionClass = 'dropup' %}
+{% else %}{% set directionClass = 'dropdown' %}
+{% endif %}
+
+<div class="btn-group {{ directionClass }}">
+    <button type="button" id="{{ id }}"
+            class="btn dropdown-toggle{% if buttonClass %} {{ buttonClass }}{% endif %}"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{ buttonLabel }}
+    </button>
+    <div class="dropdown-menu{% if dropdownMenuClass %} {{ dropdownMenuClass }}{% endif %}"
+         aria-labelledby="{{ id }}">
+        {% include menuInclude %}
+    </div>
+</div>

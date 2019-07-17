@@ -1,0 +1,103 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import 'highlight.js/styles/github.css';
+
+.ix-logo {
+    height: 0.75em;
+    vertical-align: baseline;
+}
+
+.ix-catalog-row {
+    display: flex;
+}
+
+.ix-catalog-nav {
+    background-color: theme-color('dark');
+    color: theme-color('light');
+    display: none;
+    min-width: 10rem;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    max-height: 100vh;
+    overflow-y: auto;
+
+    @include media-breakpoint-up(md) {
+        display: block;
+    }
+
+    a {
+        color: theme-color('light');
+    }
+}
+
+.ix-catalog-content {
+
+}
+
+.ix-group {
+    margin: 0 1rem 3rem;
+
+    .ix-group-name {
+        background-color: theme-color('dark');
+        color: theme-color('light');
+        margin: 0 0 2rem -1rem;
+        padding: 0.25rem 0 0.25rem 1rem;
+    }
+}
+
+.ix-structure-container {
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0);
+    border-style: dotted;
+    display: block;
+    padding-bottom: 1px;
+    position: relative;
+
+    .ix-source {
+        max-width: 2.5rem;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        visibility: hidden;
+    }
+
+    .ix-structure-name {
+        font-size: 0.75rem;
+        margin: 0.5rem 0.25rem;
+        padding: 0;
+    }
+
+    .ix-structure {
+        margin: 0 3rem;
+    }
+
+    &:hover {
+        border-color: theme-color('dark');
+
+        .ix-source {
+            visibility: visible;
+        }
+
+    }
+
+}
+
+.ix-structure {
+
+}
+
+.ix-demo-xs {
+    max-width: 320px;
+}
+
+.ix-demo-sm {
+    max-width: 576px;
+}
+
+.ix-demo-static {
+    position: static !important;
+    display: block !important;
+}
